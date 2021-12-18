@@ -1,0 +1,107 @@
+@import './config.scss';
+
+.container-login  {
+    .logo{
+        width: 178.35px;
+        height: 48px;
+        display: block;
+        margin: auto;
+        margin-bottom: 35px;
+    }
+
+    .form{
+        p{
+            color: $errorColor;
+            font-size: 14px;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .input {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+    
+            img {
+                width: 20px;
+                margin-right: 10px;
+                margin-top: -10px;
+            }
+    
+            input {
+                width: 234px;
+                font-size: 14px;
+                letter-spacing: 0.01em;
+                color: $primaryColor;
+                border-radius: 0;
+                border-top-width: 0;
+                border-left-width: 0;
+                border-right-width: 0;
+                border-bottom-width:1px;
+                border-color: $mediumGreyColor;
+                padding-bottom: 8px;
+    
+                outline: none;
+    
+                &:focus {
+                    border-color: $primaryColor;
+                }
+    
+                &::placeholder{
+                    color: $mediumGreyColor;
+                    opacity: 1;
+                }
+    
+                &:-ms-input-placeholder{
+                    color: $mediumGreyColor;
+                }
+    
+                &::-ms-input-placeholder{
+                    color: $mediumGreyColor;
+                }
+            }
+        }
+    
+        button {
+            width: 100%;
+            margin-top: 35px;
+        }
+    }
+
+    @media screen and (min-width:$mediaQueryDesktop) {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        .logo {
+            width: 520px;
+            height: 139.95px;
+            margin: 0px;
+        }
+
+        .form{
+            p{
+                max-width: none;
+            }
+
+            border: 1px solid $primaryColor;
+            box-sizing: border-box;
+            border-radius: 32px;
+            padding: 80px 40px;
+
+            
+
+            .input{
+                img {
+                    width: 20px;
+                }
+
+                .input {
+                    width: 343px;
+                }
+            }
+        }
+    }
+}
