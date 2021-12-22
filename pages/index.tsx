@@ -1,8 +1,7 @@
-import type { NextPage } from 'next' 
-import { useEffect } from 'react';
-import { useState } from 'react'
-import { Login} from '../containers/Login' 
-import { Home} from '../containers/Home' 
+import type {NextPage} from 'next'
+import {useEffect, useState} from 'react';
+import {Home} from '../containers/Home'
+import {LoginContainer} from "../containers/LoginContainer";
 
 const Index: NextPage = () => {
 
@@ -18,7 +17,7 @@ const Index: NextPage = () => {
   }, [])
 
   return (
-    accessToken ? <Home setToken={setToken}/> : <Login setToken={setToken}/>
+    accessToken ? <Home setToken={setToken}/> : <LoginContainer setToken={setToken}  />
   )
 }
 
